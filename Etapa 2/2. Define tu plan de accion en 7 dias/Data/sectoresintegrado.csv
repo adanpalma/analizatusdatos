@@ -1,0 +1,617 @@
+﻿Pais,SICCODE_Codigo,Descripcion,Riesgo,Codseccion,Descrip seccion
+CFC,10,Otras Clasificaciones,Medio,"OTR       ","""""""Asalariados: Personas naturales y sucesiones ilíquidas"
+CFC,50,INDEPENDIENTE,Alto,"V1        ",INDEPENDIENTE
+CFC,60,RENTISTA DE CAPITAL,Alto,"V2        ",RENTISTA DE CAPITAL
+CFC,70,EMPLEO INFORMAL,Alto,"V3        ",EMPLEO INFORMAL
+CFC,90,Otras Clasificaciones,Medio,"OTR       ","""""""Rentistas de Capital sólo para Personas Naturales: Personas naturales y sucesiones ilíquidas"
+CFC,111,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ","""""""Cultivo de cereales (excepto arroz)"
+CFC,112,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de arroz
+CFC,113,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ","""""""Cultivo de hortalizas"
+CFC,114,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de tabaco
+CFC,115,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de plantas textiles
+CFC,119,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Otros cultivos transitorios n.c.p.
+CFC,121,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de frutas tropicales y subtropicales
+CFC,122,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de plátano y banano
+CFC,123,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de café
+CFC,124,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de caña de azúcar
+CFC,125,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de flor de corte
+CFC,126,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de palma para aceite (palma africana) y otros frutos oleaginosos
+CFC,127,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de plantas con las que se prepararan bebidas
+CFC,128,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cultivo de especias y de plantas aromáticas y medicinales
+CFC,129,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Otros cultivos permanentes n.c.p.
+CFC,130,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ","""""""Propagación de plantas (actividades de los viveros"
+CFC,141,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de ganado bovino y bufalino
+CFC,142,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de caballos y otros equinos
+CFC,143,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de ovejas y cabras
+CFC,144,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de ganado porcino
+CFC,145,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de aves de corral
+CFC,149,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Cría de otros animales n.c.p.
+CFC,150,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Explotación mixta (agrícola y pecuaria)
+CFC,161,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Actividades de apoyo a la agricultura
+CFC,162,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Actividades de apoyo a la ganadería
+CFC,163,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Actividades posteriores a la cosecha
+CFC,164,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Tratamiento de semillas para propagación
+CFC,170,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Caza ordinaria y mediante trampas y actividades de servicios conexas
+CFC,210,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Silvicultura y otras actividades forestales
+CFC,220,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Extracción de madera
+CFC,230,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Recolección de productos forestales diferentes a la madera
+CFC,240,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Servicios de apoyo a la silvicultura
+CFC,311,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Pesca marítima
+CFC,312,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Pesca de agua dulce
+CFC,321,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Acuicultura marítima
+CFC,322,"""Agricultura, ganadería, silvicultura y pesca""",Bajo,"A         ",Acuicultura de agua dulce
+CFC,510,Explotación de minas y canteras,Bajo,"B         ",Extracción de hulla (carbón de piedra)
+CFC,520,Explotación de minas y canteras,Bajo,"B         ",Extracción de carbón lignito
+CFC,610,Explotación de minas y canteras,Bajo,"B         ",Extracción de petróleo crudo
+CFC,620,Explotación de minas y canteras,Bajo,"B         ",Extracción de gas natural
+CFC,710,Explotación de minas y canteras,Bajo,"B         ",Extracción de minerales de hierro
+CFC,721,Explotación de minas y canteras,Bajo,"B         ",Extracción de minerales de uranio y de torio
+CFC,722,Explotación de minas y canteras,Bajo,"B         ",Extracción de oro y otros metales preciosos
+CFC,723,Explotación de minas y canteras,Bajo,"B         ",Extracción de minerales de níquel
+CFC,729,Explotación de minas y canteras,Bajo,"B         ",Extracción de otros minerales metalíferos no ferrosos n.c.p.
+CFC,811,Explotación de minas y canteras,Bajo,"B         ","""""""Extracción de piedra"
+CFC,812,Explotación de minas y canteras,Bajo,"B         ","""""""Extracción de arcillas de uso industrial"
+CFC,820,Explotación de minas y canteras,Bajo,"B         ","""""""Extracción de esmeraldas"
+CFC,891,Explotación de minas y canteras,Bajo,"B         ",Extracción de minerales para la fabricación de abonos y productos quimicos
+CFC,892,Explotación de minas y canteras,Bajo,"B         ",Extracción de halita (sal)
+CFC,899,Explotación de minas y canteras,Bajo,"B         ",Extracción de otros minerales no metálicos n.c.p.
+CFC,910,Explotación de minas y canteras,Bajo,"B         ",Actividades de apoyo para la extracción de petróleo y de gas natural
+CFC,990,Explotación de minas y canteras,Bajo,"B         ",Actividades de apoyo para otras actividades de explotación de minas y canteras
+CFC,1011,Industrias manufactureras,Bajo,"C         ",Procesamiento y conservación de carne y productos cárnicos
+CFC,1012,Industrias manufactureras,Bajo,"C         ","""""""Procesamiento y conservación de pescados"
+CFC,1020,Industrias manufactureras,Bajo,"C         ","""""""Procesamiento y conservación de frutas"
+CFC,1030,Industrias manufactureras,Bajo,"C         ",Elaboración de aceites y grasas de origen vegetal y animal
+CFC,1040,Industrias manufactureras,Bajo,"C         ",Elaboración de productos lácteos
+CFC,1051,Industrias manufactureras,Bajo,"C         ",Elaboración de productos de molinería
+CFC,1052,Industrias manufactureras,Bajo,"C         ",Elaboración de almidones y productos derivados del almidón
+CFC,1061,Industrias manufactureras,Bajo,"C         ",Trilla de café
+CFC,1062,Industrias manufactureras,Bajo,"C         ","""""""Descafeinado"
+CFC,1063,Industrias manufactureras,Bajo,"C         ",Otros derivados del café
+CFC,1071,Industrias manufactureras,Bajo,"C         ",Elaboración y refinación de azúcar
+CFC,1072,Industrias manufactureras,Bajo,"C         ",Elaboración de panela
+CFC,1081,Industrias manufactureras,Bajo,"C         ",Elaboración de productos de panadería
+CFC,1082,Industrias manufactureras,Bajo,"C         ","""""""Elaboración de cacao"
+CFC,1083,Industrias manufactureras,Bajo,"C         ","""""""Elaboración de macarrones"
+CFC,1084,Industrias manufactureras,Bajo,"C         ",Elaboración de comidas y platos preparados
+CFC,1089,Industrias manufactureras,Bajo,"C         ",Elaboración de otros productos alimenticios n.c.p.
+CFC,1101,Industrias manufactureras,Bajo,"C         ","""""""Destilación"
+CFC,1102,Industrias manufactureras,Bajo,"C         ",Elaboración de bebidas fermentadas no destiladas
+CFC,1103,Industrias manufactureras,Bajo,"C         ","""""""Producción de malta"
+CFC,1104,Industrias manufactureras,Bajo,"C         ","""""""Elaboración de bebidas no alcohólicas"
+CFC,1200,Industrias manufactureras,Bajo,"C         ",Elaboración de productos de tabaco
+CFC,1311,Industrias manufactureras,Bajo,"C         ",Preparación e hilatura de fibras textiles
+CFC,1312,Industrias manufactureras,Bajo,"C         ",Tejeduría de productos textiles
+CFC,1313,Industrias manufactureras,Bajo,"C         ",Acabado de productos textiles
+CFC,1391,Industrias manufactureras,Bajo,"C         ",Fabricación de tejidos de punto y ganchillo
+CFC,1392,Industrias manufactureras,Bajo,"C         ","""""""Confección de artículos con materiales textiles"
+CFC,1393,Industrias manufactureras,Bajo,"C         ",Fabricación de tapetes y alfombras para pisos
+CFC,1394,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de cuerdas"
+CFC,1399,Industrias manufactureras,Bajo,"C         ",Fabricación de otros artículos textiles n.c.p.
+CFC,1410,Industrias manufactureras,Bajo,"C         ","""""""Confección de prendas de vestir"
+CFC,1420,Industrias manufactureras,Bajo,"C         ",Fabricación de artículos de piel
+CFC,1430,Industrias manufactureras,Bajo,"C         ",Fabricación de artículos de punto y ganchillo
+CFC,1511,Industrias manufactureras,Bajo,"C         ",Curtido y recurtido de cueros; recurtido y teñido de pieles.
+CFC,1512,Industrias manufactureras,Bajo,"C         ","""Fabricación de artículos de viaje"
+CFC,1513,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de artículos de viaje"
+CFC,1521,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de calzado de cuero y piel"
+CFC,1522,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de otros tipos de calzado"
+CFC,1523,Industrias manufactureras,Bajo,"C         ",Fabricación de partes del calzado
+CFC,1610,Industrias manufactureras,Bajo,"C         ","""""""Aserrado"
+CFC,1701,Industrias manufactureras,Bajo,"C         ",Fabricación de pulpas (pastas) celulósicas; papel y cartón
+CFC,1702,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de papel y cartón ondulado (corrugado); fabricación de envases"
+CFC,1709,Industrias manufactureras,Bajo,"C         ",Fabricación de otros artículos de papel y cartón
+CFC,1811,Industrias manufactureras,Bajo,"C         ",Actividades de impresión
+CFC,1812,Industrias manufactureras,Bajo,"C         ",Actividades de servicios relacionados con la impresión
+CFC,1820,Industrias manufactureras,Bajo,"C         ",Producción de copias a partir de grabaciones originales
+CFC,1910,Industrias manufactureras,Bajo,"C         ",Fabricación de productos de hornos de coque
+CFC,1921,Industrias manufactureras,Bajo,"C         ",Fabricación de productos de la refinación del petróleo
+CFC,1922,Industrias manufactureras,Bajo,"C         ",Actividad de mezcla de combustibles
+CFC,2011,Industrias manufactureras,Bajo,"C         ",Fabricación de sustancias y productos químicos básicos
+CFC,2012,Industrias manufactureras,Bajo,"C         ",Fabricación de abonos y compuestos inorgánicos nitrogenados
+CFC,2013,Industrias manufactureras,Bajo,"C         ",Fabricación de plásticos en formas primarias
+CFC,2014,Industrias manufactureras,Bajo,"C         ",Fabricación de caucho sintético en formas primarias
+CFC,2021,Industrias manufactureras,Bajo,"C         ",Fabricación de plaguicidas y otros productos químicos de uso agropecuario
+CFC,2022,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de pinturas"
+CFC,2023,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de jabones y detergentes"
+CFC,2029,Industrias manufactureras,Bajo,"C         ",Fabricación de otros productos químicos n.c.p.
+CFC,2030,Industrias manufactureras,Bajo,"C         ",Fabricación de fibras sintéticas y artificiales
+CFC,2100,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de productos farmacéuticos"
+CFC,2211,Industrias manufactureras,Bajo,"C         ",Fabricación de llantas y neumáticos de caucho
+CFC,2212,Industrias manufactureras,Bajo,"C         ",Reencauche de llantas usadas
+CFC,2219,Industrias manufactureras,Bajo,"C         ",Fabricación de formas básicas de caucho y otros productos de caucho n.c.p.
+CFC,2221,Industrias manufactureras,Bajo,"C         ",Fabricación de formas básicas de plástico
+CFC,2229,Industrias manufactureras,Bajo,"C         ",Fabricación de artículos de plástico n.c.p.
+CFC,2310,Industrias manufactureras,Bajo,"C         ",Fabricación de vidrio y productos de vidrio
+CFC,2391,Industrias manufactureras,Bajo,"C         ",Fabricación de productos refractarios
+CFC,2392,Industrias manufactureras,Bajo,"C         ",Fabricación de materiales de arcilla para la construcción
+CFC,2393,Industrias manufactureras,Bajo,"C         ",Fabricación de otros productos de cerámica y porcelana
+CFC,2394,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de cemento"
+CFC,2395,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de artículos de hormigón"
+CFC,2396,Industrias manufactureras,Bajo,"C         ","""""""Corte"
+CFC,2399,Industrias manufactureras,Bajo,"C         ",Fabricación de otros productos minerales no metálicos n.c.p.
+CFC,2410,Industrias manufactureras,Bajo,"C         ",Industrias básicas de hierro y de acero
+CFC,2421,Industrias manufactureras,Bajo,"C         ",Industrias básicas de metales preciosos
+CFC,2429,Industrias manufactureras,Bajo,"C         ",Industrias básicas de otros metales no ferrosos
+CFC,2431,Industrias manufactureras,Bajo,"C         ",Fundición de hierro y de acero
+CFC,2432,Industrias manufactureras,Bajo,"C         ",Fundición de metales no ferrosos
+CFC,2511,Industrias manufactureras,Bajo,"C         ",Fabricación de productos metálicos para uso estructural
+CFC,2512,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de tanques"
+CFC,2513,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de generadores de vapor"
+CFC,2520,Industrias manufactureras,Bajo,"C         ",Fabricación de armas y municiones
+CFC,2591,Industrias manufactureras,Bajo,"C         ","""""""Forja"
+CFC,2592,Industrias manufactureras,Bajo,"C         ",Tratamiento y revestimiento de metales; mecanizado
+CFC,2593,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de artículos de cuchillería"
+CFC,2599,Industrias manufactureras,Bajo,"C         ",Fabricación de otros productos elaborados de metal n.c.p.
+CFC,2610,Industrias manufactureras,Bajo,"C         ",Fabricación de componentes y tableros electrónicos
+CFC,2620,Industrias manufactureras,Bajo,"C         ",Fabricación de computadoras y de equipo periférico
+CFC,2630,Industrias manufactureras,Bajo,"C         ",Fabricación de equipos de comunicación
+CFC,2640,Industrias manufactureras,Bajo,"C         ",Fabricación de aparatos electrónicos de consumo
+CFC,2651,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de equipo de medición"
+CFC,2652,Industrias manufactureras,Bajo,"C         ",Fabricación de relojes
+CFC,2660,Industrias manufactureras,Bajo,"C         ",Fabricación de equipo de irradiación y equipo electrónico de uso médico y terapéutico
+CFC,2670,Industrias manufactureras,Bajo,"C         ",Fabricación de instrumentos ópticos y equipo fotográfico
+CFC,2680,Industrias manufactureras,Bajo,"C         ",Fabricación de soportes magnéticos y ópticos
+CFC,2711,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de motores"
+CFC,2712,Industrias manufactureras,Bajo,"C         ",Fabricación de aparatos de distribución y control de la energía electrica
+CFC,2720,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de pilas"
+CFC,2731,Industrias manufactureras,Bajo,"C         ",Fabricación de hilos y cables eléctricos y de fibra óptica
+CFC,2732,Industrias manufactureras,Bajo,"C         ",Fabricación de dispositivos de cableado
+CFC,2740,Industrias manufactureras,Bajo,"C         ",Fabricación de equipos eléctricos de iluminación
+CFC,2750,Industrias manufactureras,Bajo,"C         ",Fabricación de aparatos de uso domestico
+CFC,2790,Industrias manufactureras,Bajo,"C         ",Fabricación de otros tipos de equipo eléctrico n.c.p.
+CFC,2811,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de motores"
+CFC,2812,Industrias manufactureras,Bajo,"C         ",Fabricación de equipos de potencia hidráulica y neumática
+CFC,2813,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de otras bombas"
+CFC,2814,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de cojinetes"
+CFC,2815,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de hornos"
+CFC,2816,Industrias manufactureras,Bajo,"C         ",Fabricación de equipo de elevación y manipulación
+CFC,2817,Industrias manufactureras,Bajo,"C         ",Fabricación de maquinaria y equipo de oficina (excepto computadoras y equipo periférico)
+CFC,2818,Industrias manufactureras,Bajo,"C         ",Fabricación de herramientas manuales con motor
+CFC,2819,Industrias manufactureras,Bajo,"C         ",Fabricación de otros tipos de maquinaria y equipo de uso general n.c.p.
+CFC,2821,Industrias manufactureras,Bajo,"C         ",Fabricación de maquinaria agropecuaria y forestal
+CFC,2822,Industrias manufactureras,Bajo,"C         ",Fabricación de máquinas formadoras de metal y de máquinas herramienta
+CFC,2823,Industrias manufactureras,Bajo,"C         ",Fabricación de maquinaria para la metalurgia
+CFC,2824,Industrias manufactureras,Bajo,"C         ",Fabricación de maquinaria para explotación de minas y canteras y para obras de construcción
+CFC,2825,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de maquinaria para la elaboración de alimentos"
+CFC,2826,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de maquinaria para la elaboración de productos textiles"
+CFC,2829,Industrias manufactureras,Bajo,"C         ",Fabricación de otros tipos de maquinaria y equipo de uso especial n.c.p.
+CFC,2910,Industrias manufactureras,Bajo,"C         ",Fabricación de vehículos automotores y sus motores
+CFC,2920,Industrias manufactureras,Bajo,"C         ",Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques
+CFC,2930,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de partes"
+CFC,3011,Industrias manufactureras,Bajo,"C         ",Construcción de barcos y de estructuras flotantes
+CFC,3012,Industrias manufactureras,Bajo,"C         ",Construcción de embarcaciones de recreo y deporte
+CFC,3020,Industrias manufactureras,Bajo,"C         ",Fabricación de locomotoras y de material rodante para ferrocarriles
+CFC,3030,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de aeronaves"
+CFC,3040,Industrias manufactureras,Bajo,"C         ",Fabricación de vehículos militares de combate
+CFC,3091,Industrias manufactureras,Bajo,"C         ",Fabricación de motocicletas
+CFC,3092,Industrias manufactureras,Bajo,"C         ",Fabricación de bicicletas y de sillas de ruedas para personas con discapacidad
+CFC,3099,Industrias manufactureras,Bajo,"C         ",Fabricación de otros tipos de equipo de transporte n.c.p.
+CFC,3110,Industrias manufactureras,Bajo,"C         ",Fabricación de muebles
+CFC,3120,Industrias manufactureras,Bajo,"C         ",Fabricación de colchones y somieres
+CFC,3210,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de joyas"
+CFC,3220,Industrias manufactureras,Bajo,"C         ",Fabricación de instrumentos musicales
+CFC,3230,Industrias manufactureras,Bajo,"C         ",Fabricación de artículos y equipo para la práctica del deporte
+CFC,3240,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de juegos"
+CFC,3250,Industrias manufactureras,Bajo,"C         ","""""""Fabricación de instrumentos"
+CFC,3290,Industrias manufactureras,Bajo,"C         ",Otras industrias manufactureras n.c.p.
+CFC,3311,Industrias manufactureras,Bajo,"C         ",Mantenimiento y reparación especializado de productos elaborados en metal
+CFC,3312,Industrias manufactureras,Bajo,"C         ",Mantenimiento y reparación especializado de maquinaria y equipo
+CFC,3313,Industrias manufactureras,Bajo,"C         ",Mantenimiento y reparación especializado de equipo electrónico y óptico
+CFC,3314,Industrias manufactureras,Bajo,"C         ",Mantenimiento y reparación especializado de equipo eléctrico
+CFC,3315,Industrias manufactureras,Bajo,"C         ","""""""Mantenimiento y reparación especializado de equipo de transporte"
+CFC,3319,Industrias manufactureras,Bajo,"C         ",Mantenimiento y reparación de otros tipos de equipos y sus componentes n.c.p.
+CFC,3320,Industrias manufactureras,Bajo,"C         ",Instalación especializada de maquinaria y equipo industrial
+CFC,3511,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Generación de energía eléctrica
+CFC,3512,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Transmisión de energía eléctrica
+CFC,3513,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Distribución de energía eléctrica
+CFC,3514,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Comercialización de energía eléctrica
+CFC,3520,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Producción de gas; distribución de combustibles gaseosos por tuberías
+CFC,3530,"""Suministro de electricidad, gas, vapor y aire acondicionado""",Bajo,"D         ",Suministro de vapor y aire acondicionado
+CFC,3600,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ","""""""Captación"
+CFC,3700,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Evacuación y tratamiento de aguas residuales
+CFC,3811,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Recolección de desechos no peligrosos
+CFC,3812,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Recolección de desechos peligrosos
+CFC,3821,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Tratamiento y disposición de desechos no peligrosos
+CFC,3822,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Tratamiento y disposición de desechos peligrosos
+CFC,3830,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Recuperación de materiales
+CFC,3900,"""Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación""",Bajo,"E         ",Actividades de saneamiento ambiental y otros servicios de gestión de desechos
+CFC,4111,Construcción,Bajo,"F         ",Construcción de edificios residenciales
+CFC,4112,Construcción,Bajo,"F         ",Construcción de edificios no residenciales
+CFC,4210,Construcción,Bajo,"F         ",Construcción de carreteras y vías de ferrocarril
+CFC,4220,Construcción,Bajo,"F         ",Construcción de proyectos de servicio público
+CFC,4290,Construcción,Bajo,"F         ",Construcción de otras obras de ingeniería civil
+CFC,4311,Construcción,Bajo,"F         ",Demolición
+CFC,4312,Construcción,Bajo,"F         ",Preparación del terreno
+CFC,4321,Construcción,Bajo,"F         ",Instalaciones eléctricas
+CFC,4322,Construcción,Bajo,"F         ","""""""Instalaciones de fontanería"
+CFC,4329,Construcción,Bajo,"F         ",Otras instalaciones especializadas
+CFC,4330,Construcción,Bajo,"F         ",Terminación y acabado de edificios y obras de ingeniería civil
+CFC,4390,Construcción,Bajo,"F         ",Otras actividades especializadas para la construcción de edificios y obras de ingeniería civil
+CFC,4511,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio de vehículos automotores nuevos
+CFC,4512,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio de vehículos automotores usados
+CFC,4520,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Mantenimiento y reparación de vehículos automotores
+CFC,4530,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio de partes"
+CFC,4541,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio de motocicletas y de sus partes"
+CFC,4542,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Mantenimiento y reparación de motocicletas y de sus partes y piezas
+CFC,4610,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor a cambio de una retribución o por contrata
+CFC,4620,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de materias primas agropecuarias; animales vivos
+CFC,4631,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de productos alimenticios
+CFC,4632,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de bebidas y tabaco
+CFC,4641,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de productos textiles"
+CFC,4642,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de prendas de vestir
+CFC,4643,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de calzado
+CFC,4644,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de aparatos y equipo de uso doméstico
+CFC,4645,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de productos farmacéuticos"
+CFC,4649,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de otros utensilios domésticos n.c.p.
+CFC,4651,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de computadores"
+CFC,4652,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de equipo"
+CFC,4653,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de maquinaria y equipo agropecuarios
+CFC,4659,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de otros tipos de maquinaria y equipo n.c.p.
+CFC,4661,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de combustibles sólidos"
+CFC,4662,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de metales y productos metalíferos
+CFC,4663,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""Comercio al por mayor de materiales de construcción"
+CFC,4664,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de productos químicos básicos"
+CFC,4665,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por mayor de desperdicios"
+CFC,4669,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor de otros productos n.c.p.
+CFC,4690,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por mayor no especializado
+CFC,4711,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor en establecimientos no especializados con surtido compuesto principalmente "
+CFC,4719,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""Comercio al por menor en establecimientos no especializados"
+CFC,4721,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de productos agrícolas para el consumo en establecimientos especializados
+CFC,4722,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de leche"
+CFC,4723,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de carnes (incluye aves de corral)"
+CFC,4724,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de bebidas y productos del tabaco"
+CFC,4729,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de otros productos alimenticios n.c.p."
+CFC,4731,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de combustible para automotores
+CFC,4732,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de lubricantes (aceites"
+CFC,4741,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""Comercio al por menor de computadores"
+CFC,4742,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de equipos y aparatos de sonido y de video"
+CFC,4751,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de productos textiles en establecimientos especializados
+CFC,4752,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de artículos de ferretería"
+CFC,4753,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de tapices"
+CFC,4754,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de electrodomésticos y gasodomesticos de uso doméstico"
+CFC,4755,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de artículos y utensilios de uso domestico
+CFC,4759,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de otros artículos domésticos en establecimientos especializados
+CFC,4761,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de libros"
+CFC,4762,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de artículos deportivos"
+CFC,4769,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","Comercio al por menor de otros artículos culturales y de entretenimiento n.c.p. en establecimientos "
+CFC,4771,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de prendas de vestir y sus accesorios (incluye artículos de piel) en estableci
+CFC,4772,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de todo tipo de calzado y artículos de cuero y sucedáneos del cuero en estable
+CFC,4773,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de productos farmacéuticos y medicinales"
+CFC,4774,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de otros productos nuevos en establecimientos especializados
+CFC,4775,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de artículos de segunda mano
+CFC,4781,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de alimentos"
+CFC,4782,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Comercio al por menor de productos textiles"
+CFC,4789,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor de otros productos en puestos de venta móviles
+CFC,4791,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor realizado a través de Internet
+CFC,4792,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ",Comercio al por menor realizado a través de casas de venta o por correo
+CFC,4799,Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas,Medio,"G         ","""""""Otros tipos de comercio al por menor no realizado en establecimientos"
+CFC,4911,Transporte y almacenamiento,Medio,"H         ",Transporte férreo de pasajeros
+CFC,4912,Transporte y almacenamiento,Medio,"H         ",Transporte férreo de carga
+CFC,4921,Transporte y almacenamiento,Medio,"H         ",Transporte de pasajeros
+CFC,4922,Transporte y almacenamiento,Medio,"H         ",Transporte mixto
+CFC,4923,Transporte y almacenamiento,Medio,"H         ",Transporte de carga por carretera
+CFC,4930,Transporte y almacenamiento,Medio,"H         ",Transporte por tuberías
+CFC,5011,Transporte y almacenamiento,Medio,"H         ",Transporte de pasajeros marítimo y de cabotaje
+CFC,5012,Transporte y almacenamiento,Medio,"H         ",Transporte de carga marítimo y de cabotaje
+CFC,5021,Transporte y almacenamiento,Medio,"H         ",Transporte fluvial de pasajeros
+CFC,5022,Transporte y almacenamiento,Medio,"H         ",Transporte fluvial de carga
+CFC,5111,Transporte y almacenamiento,Medio,"H         ",Transporte aéreo nacional de pasajeros
+CFC,5112,Transporte y almacenamiento,Medio,"H         ",Transporte aéreo internacional de pasajeros
+CFC,5121,Transporte y almacenamiento,Medio,"H         ",Transporte aéreo nacional de carga
+CFC,5122,Transporte y almacenamiento,Medio,"H         ",Transporte aéreo internacional de carga
+CFC,5210,Transporte y almacenamiento,Medio,"H         ",Almacenamiento y depósito
+CFC,5221,Transporte y almacenamiento,Medio,"H         ","""""""Actividades de estaciones"
+CFC,5222,Transporte y almacenamiento,Medio,"H         ",Actividades de puertos y servicios complementarios para el transporte acuático
+CFC,5223,Transporte y almacenamiento,Medio,"H         ","""""""Actividades de aeropuertos"
+CFC,5224,Transporte y almacenamiento,Medio,"H         ",Manipulación de carga
+CFC,5229,Transporte y almacenamiento,Medio,"H         ",Otras actividades complementarias al transporte
+CFC,5310,Transporte y almacenamiento,Medio,"H         ",Actividades postales nacionales
+CFC,5320,Transporte y almacenamiento,Medio,"H         ",Actividades de mensajería
+CFC,5511,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Alojamiento en hoteles
+CFC,5512,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Alojamiento en aparta-hoteles
+CFC,5513,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Alojamiento en centros vacacionales
+CFC,5514,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Alojamiento rural
+CFC,5519,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Otros tipos de alojamientos para visitantes
+CFC,5520,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Actividades de zonas de camping y parques para vehículos recreacionales
+CFC,5530,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Servicio por horas
+CFC,5590,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Otros tipos de alojamiento n.c.p.
+CFC,5611,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Expendio a la mesa de comidas preparadas
+CFC,5612,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Expendio por autoservicio de comidas preparadas
+CFC,5613,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Expendio de comidas preparadas en cafeterías
+CFC,5619,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Otros tipos de expendio de comidas preparadas n.c.p.
+CFC,5621,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Catering para eventos
+CFC,5629,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Actividades de otros servicios de comidas
+CFC,5630,Actividades de alojamiento y de servicio de comidas,Alto,"I         ",Expendio de bebidas alcohólicas para el consumo dentro del establecimiento
+CFC,5811,Información y comunicaciones,Bajo,"J         ",Edición de libros
+CFC,5812,Información y comunicaciones,Bajo,"J         ",Edición de directorios y listas de correo
+CFC,5813,Información y comunicaciones,Bajo,"J         ","""""""Edición de periódicos"
+CFC,5819,Información y comunicaciones,Bajo,"J         ",Otros trabajos de edición
+CFC,5820,Información y comunicaciones,Bajo,"J         ",Edición de programas de informática (software)
+CFC,5911,Información y comunicaciones,Bajo,"J         ","""""""Actividades de producción de películas cinematográficas"
+CFC,5912,Información y comunicaciones,Bajo,"J         ","""""""Actividades de postproducción de películas cinematográficas"
+CFC,5913,Información y comunicaciones,Bajo,"J         ","""""""Actividades de distribución de películas cinematográficas"
+CFC,5914,Información y comunicaciones,Bajo,"J         ",Actividades de exhibición de películas cinematográficas y videos
+CFC,5920,Información y comunicaciones,Bajo,"J         ",Actividades de grabación de sonido y edición de musica
+CFC,6010,Información y comunicaciones,Bajo,"J         ",Actividades de programación y transmisión en el servicio de radiodifusión sonora
+CFC,6020,Información y comunicaciones,Bajo,"J         ",Actividades de programación y transmisión de televisión
+CFC,6110,Información y comunicaciones,Bajo,"J         ",Actividades de telecomunicaciones alámbricas
+CFC,6120,Información y comunicaciones,Bajo,"J         ",Actividades de telecomunicaciones inalámbricas
+CFC,6130,Información y comunicaciones,Bajo,"J         ",Actividades de telecomunicación satelital
+CFC,6190,Información y comunicaciones,Bajo,"J         ",Otras actividades de telecomunicaciones
+CFC,6201,Información y comunicaciones,Bajo,"J         ","""""""Actividades de desarrollo de sistemas informáticos (planificación"
+CFC,6202,Información y comunicaciones,Bajo,"J         ",Actividades de consultoría informática y actividades de administración de instalaciones informáticas
+CFC,6209,Información y comunicaciones,Bajo,"J         ",Otras actividades de tecnologías de información y actividades de servicios informáticos
+CFC,6311,Información y comunicaciones,Bajo,"J         ","""""""Procesamiento de datos"
+CFC,6312,Información y comunicaciones,Bajo,"J         ",Portales Web
+CFC,6391,Información y comunicaciones,Bajo,"J         ",Actividades de agencias de noticias
+CFC,6399,Información y comunicaciones,Bajo,"J         ",Otras actividades de servicio de información n.c.p.
+CFC,6411,Actividades financieras y de seguros,Bajo,"K         ",Banco Central
+CFC,6412,Actividades financieras y de seguros,Bajo,"K         ",Bancos comerciales
+CFC,6421,Actividades financieras y de seguros,Bajo,"K         ",Actividades de las corporaciones financieras
+CFC,6422,Actividades financieras y de seguros,Bajo,"K         ",Actividades de las compañías de financiamiento
+CFC,6423,Actividades financieras y de seguros,Bajo,"K         ",Banca de segundo piso
+CFC,6424,Actividades financieras y de seguros,Bajo,"K         ",Actividades de las cooperativas financieras
+CFC,6431,Actividades financieras y de seguros,Bajo,"K         ","""""""Fideicomisos"
+CFC,6432,Actividades financieras y de seguros,Bajo,"K         ",Fondos de cesantías
+CFC,6491,Actividades financieras y de seguros,Bajo,"K         ",Leasing financiero (arrendamiento financiero)
+CFC,6492,Actividades financieras y de seguros,Bajo,"K         ",Actividades financieras de fondos de empleados y otras formas asociativas del sector solidario
+CFC,6493,Actividades financieras y de seguros,Bajo,"K         ",Actividades de compra de cartera o factoring
+CFC,6494,Actividades financieras y de seguros,Bajo,"K         ",Otras actividades de distribución de fondos
+CFC,6495,Actividades financieras y de seguros,Bajo,"K         ",Instituciones especiales oficiales
+CFC,6499,Actividades financieras y de seguros,Bajo,"K         ","""""""Otras actividades de servicio financiero"
+CFC,6511,Actividades financieras y de seguros,Bajo,"K         ",Seguros generales
+CFC,6512,Actividades financieras y de seguros,Bajo,"K         ",Seguros de vida
+CFC,6513,Actividades financieras y de seguros,Bajo,"K         ",Reaseguros
+CFC,6514,Actividades financieras y de seguros,Bajo,"K         ",Capitalización
+CFC,6521,Actividades financieras y de seguros,Bajo,"K         ",Servicios de seguros sociales de salud
+CFC,6522,Actividades financieras y de seguros,Bajo,"K         ",Servicios de seguros sociales de riesgos profesionales
+CFC,6531,Actividades financieras y de seguros,Bajo,"K         ",Régimen de prima media con prestación definida (RPM)
+CFC,6532,Actividades financieras y de seguros,Bajo,"K         ",Régimen de ahorro individual (RAI)
+CFC,6611,Actividades financieras y de seguros,Bajo,"K         ",Administración de mercados financieros
+CFC,6612,Actividades financieras y de seguros,Bajo,"K         ",Corretaje de valores y de contratos de productos básicos
+CFC,6613,Actividades financieras y de seguros,Bajo,"K         ",Otras actividades relacionadas con el mercado de valores
+CFC,6614,Actividades financieras y de seguros,Bajo,"K         ",Actividades de las casas de cambio
+CFC,6615,Actividades financieras y de seguros,Bajo,"K         ",Actividades de los profesionales de compra y venta de divisas
+CFC,6619,Actividades financieras y de seguros,Bajo,"K         ",Otras actividades auxiliares de las actividades de servicios financieros n.c.p.
+CFC,6621,Actividades financieras y de seguros,Bajo,"K         ",Actividades de agentes y corredores de seguros
+CFC,6629,Actividades financieras y de seguros,Bajo,"K         ","""""""Evaluación de riesgos y daños"
+CFC,6630,Actividades financieras y de seguros,Bajo,"K         ",Actividades de administración de fondos
+CFC,6810,Actividades inmobiliarias,Medio,"L         ",Actividades inmobiliarias realizadas con bienes propios o arrendados
+CFC,6820,Actividades inmobiliarias,Medio,"L         ",Actividades inmobiliarias realizadas a cambio de una retribución o por contrata
+CFC,6910,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades jurídicas
+CFC,6920,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ","""""""Actividades de contabilidad"
+CFC,7010,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades de administración empresarial
+CFC,7020,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades de consultaría de gestión
+CFC,7110,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades de arquitectura e ingeniería y otras actividades conexas de consultoría técnica
+CFC,7120,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Ensayos y análisis técnicos
+CFC,7210,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Investigaciones y desarrollo experimental en el campo de las ciencias naturales y la ingeniería
+CFC,7220,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Investigaciones y desarrollo experimental en el campo de las ciencias sociales y las humanidades
+CFC,7310,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Publicidad
+CFC,7320,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Estudios de mercado y realización de encuestas de opinión pública
+CFC,7410,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades especializadas de diseño
+CFC,7420,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades de fotografía
+CFC,7490,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ","""""""Otras actividades profesionales"
+CFC,7500,"""Actividades profesionales, científicas y técnicas""",Medio,"M         ",Actividades veterinarias
+CFC,7710,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Alquiler y arrendamiento de vehículos automotores
+CFC,7721,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Alquiler y arrendamiento de equipo recreativo y deportivo
+CFC,7722,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Alquiler de videos y discos
+CFC,7729,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Alquiler y arrendamiento de otros efectos personales y enseres domésticos n.c.p.
+CFC,7730,Actividades de servicios administrativos y de apoyo,Medio,"N         ","""""""Alquiler y arrendamiento de otros tipos de maquinaria"
+CFC,7740,Actividades de servicios administrativos y de apoyo,Medio,"N         ","""""""Arrendamiento de propiedad intelectual y productos similares"
+CFC,7810,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de agencias de empleo
+CFC,7820,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de agencias de empleo temporal
+CFC,7830,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Otras actividades de suministro de recurso humano
+CFC,7911,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de las agencias de viaje
+CFC,7912,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de operadores turísticos
+CFC,7990,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Otros servicios de reserva y actividades relacionadas
+CFC,8010,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de seguridad privada
+CFC,8020,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de servicios de sistemas de seguridad
+CFC,8030,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de detectives e investigadores privados
+CFC,8110,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades combinadas de apoyo a instalaciones
+CFC,8121,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Limpieza general interior de edificios
+CFC,8129,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Otras actividades de limpieza de edificios e instalaciones industriales
+CFC,8130,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de paisajismo y servicios de mantenimiento conexos
+CFC,8211,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades combinadas de servicios administrativos de oficina
+CFC,8219,Actividades de servicios administrativos y de apoyo,Medio,"N         ","""""""Fotocopiado"
+CFC,8220,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de centros de llamadas (Call center)
+CFC,8230,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Organización de convenciones y eventos comerciales
+CFC,8291,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de agencias de cobranza y oficinas de calificación crediticia
+CFC,8292,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Actividades de envase y empaque
+CFC,8299,Actividades de servicios administrativos y de apoyo,Medio,"N         ",Otras actividades de servicio de apoyo a las empresas n.c.p.
+CFC,8411,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades legislativas de la administración pública
+CFC,8412,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades ejecutivas de la administración pública
+CFC,8413,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ","""Regulación de las actividades de organismos que prestan servicios de salud"
+CFC,8414,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades reguladoras y facilitadoras de la actividad económica
+CFC,8415,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades de los otros órganos de control
+CFC,8421,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Relaciones exteriores
+CFC,8422,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades de defensa
+CFC,8423,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Orden público y actividades de seguridad
+CFC,8424,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Administración de justicia
+CFC,8430,Administración pública y defensa; planes de seguridad social de afiliación obligatoria,Bajo,"O         ",Actividades de planes de Seguridad Social de afiliación obligatoria
+CFC,8511,Enseñanza,Bajo,"P         ",Educación de la primera infancia
+CFC,8512,Enseñanza,Bajo,"P         ",Educación preescolar
+CFC,8513,Enseñanza,Bajo,"P         ",Educación básica primaria
+CFC,8521,Enseñanza,Bajo,"P         ",Educación básica secundaria
+CFC,8522,Enseñanza,Bajo,"P         ",Educación media académica
+CFC,8523,Enseñanza,Bajo,"P         ",Educación media técnica y de formación laboral
+CFC,8530,Enseñanza,Bajo,"P         ",Establecimientos que combinan diferentes niveles de educación
+CFC,8541,Enseñanza,Bajo,"P         ",Educación técnica profesional
+CFC,8542,Enseñanza,Bajo,"P         ",Educación tecnológica
+CFC,8543,Enseñanza,Bajo,"P         ",Educación de instituciones universitarias o de escuelas tecnológicas
+CFC,8544,Enseñanza,Bajo,"P         ",Educación de universidades
+CFC,8551,Enseñanza,Bajo,"P         ",Formación académica no formal
+CFC,8552,Enseñanza,Bajo,"P         ",Enseñanza deportiva y recreativa
+CFC,8553,Enseñanza,Bajo,"P         ",Enseñanza cultural
+CFC,8559,Enseñanza,Bajo,"P         ",Otros tipos de educación n.c.p.
+CFC,8560,Enseñanza,Bajo,"P         ",Actividades de apoyo a la educación
+CFC,8610,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ","""""""Actividades de hospitales y clínicas"
+CFC,8621,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ","""""""Actividades de la práctica médica"
+CFC,8622,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de la práctica odontológica
+CFC,8691,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de apoyo diagnóstico
+CFC,8692,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de apoyo terapéutico
+CFC,8699,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Otras actividades de atención de la salud humana
+CFC,8710,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de atención residencial medicalizada de tipo general
+CFC,8720,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ","""""""Actividades de atención residencial"
+CFC,8730,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de atención en instituciones para el cuidado de personas mayores y/o discapacitadas
+CFC,8790,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Otras actividades de atención en instituciones con alojamiento
+CFC,8810,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Actividades de asistencia social sin alojamiento para personas mayores y discapacitadas
+CFC,8890,Actividades de atención de la salud humana y de asistencia social,Bajo,"Q         ",Otras actividades de asistencia social sin alojamiento
+CFC,9001,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Creación literaria
+CFC,9002,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Creación musical
+CFC,9003,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Creación teatral
+CFC,9004,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Creación audiovisual
+CFC,9005,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Artes plásticas y visuales
+CFC,9006,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades teatrales
+CFC,9007,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades de espectáculos musicales en vivo
+CFC,9008,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Otras actividades de espectáculos en vivo
+CFC,9009,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Otras actividades de espectáculos en vivo
+CFC,9101,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades de Bibliotecas y archivos
+CFC,9102,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ","""""""Actividades y funcionamiento de museos"
+CFC,9103,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ","""""""Actividades de jardines botánicos"
+CFC,9200,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades de juegos de azar y apuestas
+CFC,9311,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Gestión de instalaciones deportivas
+CFC,9312,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades de clubes deportivos
+CFC,9319,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Otras actividades deportivas
+CFC,9321,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Actividades de parques de atracciones y parques temáticos
+CFC,9329,"""Actividades artísticas, de entretenimiento y recreativas""",Alto,"R         ",Otras actividades recreativas y de esparcimiento n.c.p.
+CFC,9411,Otras actividades de servicios,Medio,"S         ",Actividades de asociaciones empresariales y de empleadores
+CFC,9412,Otras actividades de servicios,Medio,"S         ",Actividades de asociaciones profesionales
+CFC,9420,Otras actividades de servicios,Medio,"S         ",Actividades de sindicatos de empleados
+CFC,9491,Otras actividades de servicios,Medio,"S         ",Actividades de asociaciones religiosas
+CFC,9492,Otras actividades de servicios,Medio,"S         ",Actividades de asociaciones políticas
+CFC,9499,Otras actividades de servicios,Medio,"S         ",Actividades de otras asociaciones n.c.p.
+CFC,9511,Otras actividades de servicios,Medio,"S         ",Mantenimiento y reparación de computadores y de equipo periférico
+CFC,9512,Otras actividades de servicios,Medio,"S         ",Mantenimiento y reparación de equipos de comunicación
+CFC,9521,Otras actividades de servicios,Medio,"S         ",Mantenimiento y reparación de aparatos electrónicos de consumo
+CFC,9522,Otras actividades de servicios,Medio,"S         ",Mantenimiento y reparación de aparatos domésticos y equipos domésticos y de jardinería
+CFC,9523,Otras actividades de servicios,Medio,"S         ",Reparación de calzado y artículos de cuero
+CFC,9524,Otras actividades de servicios,Medio,"S         ",Reparación de muebles y accesorios para el hogar
+CFC,9529,Otras actividades de servicios,Medio,"S         ",Mantenimiento y reparación de otros efectos personales y enseres domésticos
+CFC,9601,Otras actividades de servicios,Medio,"S         ","""""""Lavado y limpieza"
+CFC,9602,Otras actividades de servicios,Medio,"S         ",Peluquería y otros tratamientos de belleza
+CFC,9603,Otras actividades de servicios,Medio,"S         ",Pompas fúnebres y actividades relacionadas
+CFC,9609,Otras actividades de servicios,Medio,"S         ",Otras actividades de servicios personales n.c.p.
+CFC,9700,Actividades de los hogares como empleadores; actividades no diferenciadas de los hogares como produc,Bajo,"T         ",Actividades de los hogares individuales como empleadores de personal doméstico
+CFC,9810,Actividades de los hogares como empleadores; actividades no diferenciadas de los hogares como produc,Bajo,"T         ",Actividades no diferenciadas de los hogares individuales como productores de bienes para uso propio
+CFC,9820,Actividades de los hogares como empleadores; actividades no diferenciadas de los hogares como produc,Bajo,"T         ",Actividades no diferenciadas de los hogares individuales como productores de servicios para uso prop
+CFC,9900,Actividades de organizaciones y órganos extraterritoriales,Bajo,"U         ",Actividades de organizaciones y entidades extraterritoriales
+PAN,10,CULTIVOS EN GENERAL,Medio,NULL,NULL
+PAN,20,CRIA DE ANIMALES DOMESTICOS,Bajo,NULL,NULL
+PAN,30,CAZA,NULL,NULL,NULL
+PAN,40,"SILVICULTURA, EXTRACCION DE MADERA SERVICIOS RELACIONADOS",Medio,NULL,NULL
+PAN,50,PESCA,Bajo,NULL,NULL
+PAN,60,EXPLOTACION DE MINAS Y CANTERAS,Bajo,NULL,NULL
+PAN,70,CONSTRUCCION,Medio,NULL,NULL
+PAN,80,FABRICACION DE PRODUCTOS ALIMENTICIOS,Bajo,NULL,NULL
+PAN,90,FABRICACION DE ROPAS Y OTROS PRODUCTOS TEXTILES,Medio,NULL,NULL
+PAN,100,FABRICACION DE OTROS PRODUCTOS NO CLASIFICADOS ANTERIORMENTE,Medio,NULL,NULL
+PAN,110,PUBLICACIONES Y SERVICIOS DE IMPRESION (PERIOD. REVIS.EDI,Medio,NULL,NULL
+PAN,120,TRANSPORTE,Medio,NULL,NULL
+PAN,130,COMUNICACIONES,Bajo,NULL,NULL
+PAN,140,"ELECTRICIDAD,GAS Y AGUA",Bajo,NULL,NULL
+PAN,150,VENTA DE MERCANCIAS DURABLES,Medio,NULL,NULL
+PAN,160,VENTA DE MERCANCIAS NO DURABLES,Bajo,NULL,NULL
+PAN,170,ACTIVIDAD COMERCIAL EN ZONAS FRANCAS,Alto,NULL,NULL
+PAN,180,TIENDAS DE MERCANCIAS,Medio,NULL,NULL
+PAN,190,FINANCIERO Y SEGUROS,Medio,NULL,NULL
+PAN,200,HOTELES Y RESTAURANTES,Alto,NULL,NULL
+PAN,210,OTROS SERVICIOS,Medio,NULL,NULL
+PAN,220,EDUCACION PUBLICA,Bajo,NULL,NULL
+PAN,230,EDUCACION PRIVADA,Medio,NULL,NULL
+PAN,240,SALUD PUBLICA,Bajo,NULL,NULL
+PAN,250,SALUD PRIVADA,Bajo,NULL,NULL
+PAN,260,ACTIVIDADES DEL GOBIERNO,Bajo,NULL,NULL
+PAN,270,EMPLEO INFORMAL,Alto,NULL,NULL
+PAN,280,INDEPENDIENTES (PROFESIONALES Y PEQUEÑOS EMPRESARIOS),Medio,NULL,NULL
+PAN,290,EMPRESAS COMERCIALIZADORAS DE EQUIPOS E INSUMOS MÉDICOS,Bajo,NULL,NULL
+PAN,300,ASEGURADORAS,Bajo,NULL,NULL
+PAN,310,CASA DE VALORES,Bajo,NULL,NULL
+PAN,320,ADMINISTRADORA DE FONDOS DE TERCEROS (PENSIÓN Y CESANTÍA),Medio,NULL,NULL
+PAN,330,"ADM.INVERSIONISTA DE BIENES Y FONDOS (S.A., FID. FUNDACIÓN)",Medio,NULL,NULL
+PAN,340,EMPRESAS FINANCIERAS O COOPERATIVAS,Bajo,NULL,NULL
+PAN,350,ADM. INVERSIONISTAS DE BIENES O FONDOS (ONG),Medio,NULL,NULL
+PAN,360,CONTADOR INDEPENDIENTE,Medio,NULL,NULL
+PAN,370,BUFETE DE ABOGADOS,Medio,NULL,NULL
+PAN,380,FIRMA DE CONTADORES,Medio,NULL,NULL
+PAN,390,EMPRESA DE BIENES RAÍCES,Medio,NULL,NULL
+PAN,400,JOYERÍA (PERSONA JURÍDICA),NULL,NULL,NULL
+PAN,410,"VENTA DE ANTIGUEDADES, ARTE, ART. DE COLECCIÓN",NULL,NULL,NULL
+PAN,420,VENTA DE ARTÍCULOS DE CUERO,NULL,NULL,NULL
+PAN,430,AGENCIA DE VIAJES,Alto,NULL,NULL
+PAN,440,CASA DE EMPEÑO,Bajo,NULL,NULL
+PAN,450,"CASA DE CAMBIO DE BILLETES, MONEDAS Y DOC. NEGOCIABLES",Medio,NULL,NULL
+PAN,460,EMPRESA AVALUADORA,Medio,NULL,NULL
+PAN,470,CASA DE COMPRA Y VENTA DE DIVISAS(FOREX),NULL,NULL,NULL
+PAN,480,CASINOS Y OTROS NEGOCIOS RELACIONADOS,Alto,NULL,NULL
+PAN,490,REMESADO DE DINERO,NULL,NULL,NULL
+PAN,500,BANCO PANTALLA,NULL,NULL,NULL
+PAN,510,INTERNET CAFÉ Y SIMILARES,Alto,NULL,NULL
+PAN,520,"NEGOCIO QUE SURTE EFECTOS A TRAVÉS DE INTERNET(APUESTAS,ETC)",Bajo,NULL,NULL
+PAN,521,NA,Medio,NULL,NULL
+PAN,530," ADM. INVERSIONISTAS DE BIENES Y FONDOS (S.A., FID. FUNDACIÓ",NULL,NULL,NULL
+PAN,540,INVERSIONISTA DOCUMENTADO(PERSONA NATURAL O JURÍDICO),Medio,NULL,NULL
+PAN,550,SIN TRABAJO/SIN ACTIVIDAD ECONOMICA CONOCIDA,NULL,NULL,NULL
+PAN,560,INDEPENDIENTE,NULL,NULL,NULL
+PAN,570,CUSTODIA Y TRASLADO DE VALORES,Bajo,NULL,NULL
+PAN,580,SERVICIOS DE VIGILANCIA Y SEGURIDAD PRIVADA,Medio,NULL,NULL
+PAN,590,SUMINISTRO Y SERVICIO TECNICO DE EQUIPOS DE TECNOLOGIA,Bajo,NULL,NULL
+PAN,600,ACTIVIDADES DEPORTIVAS Y RECREATIVAS,Alto,NULL,NULL
+PAN,610,AGENCIAS DE EMPLEO,Medio,NULL,NULL
+PAN,620,ACTIVIDADES DE CENTROS DE LLAMADAS,Bajo,NULL,NULL
+PAN,630,SERVICIOS PARA TRANSPORTE MARITIMO,Medio,NULL,NULL
+PAN,640,INSTALACIONES ELECTRICAS,Bajo,NULL,NULL
+PAN,650,ACTIVIDADES DE LIMPIEZA EN GENERAL,Medio,NULL,NULL
+PAN,660,SERVICIOS DE INGENIERIA,Medio,NULL,NULL
+PAN,670,ADMINISTRACION DE EDIFICIOS Y PH,Bajo,NULL,NULL
+PAN,14401,NA,Medio,NULL,NULL
+SAL,-1000,Sin Sector Asignado,Alto,NULL,NULL
+SAL,10,CONSTRUCCION,NULL,NULL,NULL
+SAL,20,CRIA DE ANIMALES DOMESTICOS,NULL,NULL,NULL
+SAL,40,"""SILVICULTURA, EXTRACCION DE MADERA SERVICIOS RELACIONADOS""",Bajo,NULL,NULL
+SAL,50,PESCA,NULL,NULL,NULL
+SAL,60,EXPLOTACION DE MINAS Y CANTERAS,NULL,NULL,NULL
+SAL,70,CONSTRUCCION,Medio,NULL,NULL
+SAL,80,FABRICACION DE PRODUCTOS ALIMENTICIOS,Bajo,NULL,NULL
+SAL,90,FABRICACION DE ROPAS Y OTROS PRODUCTOS TEXTILES,Medio,NULL,NULL
+SAL,100,FABRICACION DE OTROS PRODUCTOS NO CLASIFICADOS ANTERIORMENTE,Medio,NULL,NULL
+SAL,110,PUBLICACIONES Y SERVICIOS DE IMPRESION (PERIOD. REVIS.EDI,Medio,NULL,NULL
+SAL,120,TRANSPORTE,Medio,NULL,NULL
+SAL,130,COMUNICACIONES,Bajo,NULL,NULL
+SAL,140,"""ELECTRICIDAD,GAS Y AGUA""",Bajo,NULL,NULL
+SAL,150,VENTA DE MERCANCIAS DURABLES,Bajo,NULL,NULL
+SAL,160,VENTA DE MERCANCIAS NO DURABLES,Bajo,NULL,NULL
+SAL,170,ACTIVIDAD COMERCIAL EN ZONAS FRANCAS,Medio,NULL,NULL
+SAL,180,TIENDAS DE MERCANCIAS,Medio,NULL,NULL
+SAL,190,FINANCIERO Y SEGUROS,Medio,NULL,NULL
+SAL,200,HOTELES Y RESTAURANTES,Alto,NULL,NULL
+SAL,210,OTROS SERVICIOS,Medio,NULL,NULL
+SAL,220,EDUCACION PUBLICA,Bajo,NULL,NULL
+SAL,230,EDUCACION PRIVADA,Bajo,NULL,NULL
+SAL,240,SALUD PUBLICA,Bajo,NULL,NULL
+SAL,250,SALUD PRIVADA,Bajo,NULL,NULL
+SAL,260,ACTIVIDADES DEL GOBIERNO,Bajo,NULL,NULL
+SAL,270,EMPRESAS DE TELECOMUNICACIONES,Alto,NULL,NULL
+SAL,280,ABOGADO INDEPENDIENTE (DOCUMENTADO),Medio,NULL,NULL
+SAL,290,EMPRESAS COMERCIALIZADORAS DE EQUIPOS E INSUMOS MÉDICOS,Bajo,NULL,NULL
+SAL,300,EMPLEO INFORMAL,NULL,NULL,NULL
+SAL,310,CASA DE VALORES,NULL,NULL,NULL
+SAL,320,INDEPENDIENTES,NULL,NULL,NULL
+SAL,330,INGRESOS PROVENIENTES DEL EXTERIOR,NULL,NULL,NULL
+SAL,340,EMPRESAS FINANCIERAS O COOPERATIVAS,Bajo,NULL,NULL
+SAL,350,FALLECIDO,NULL,NULL,NULL
+SAL,360,CONTADOR INDEPENDIENTE (DOCUMENTADO),Medio,NULL,NULL
+SAL,380,FIRMA DE CONTADORES,Medio,NULL,NULL
+SAL,390,EMPRESA DE BIENES RAÍCES,Medio,NULL,NULL
+SAL,400,PENSIONADOS Y JUBILADOS,NULL,NULL,NULL
+SAL,410,ALMACENAMIENTO Y TRANSPORTE DE MERCANCIAS,Bajo,NULL,NULL
+SAL,420,SERVICIOS COMERCIALES (CONSULTORIA-ASESORIAS),Bajo,NULL,NULL
+SAL,430,LAVANDERIAS Y/O DRY CLEANING,Bajo,NULL,NULL
+SAL,440,ORGANIZACIONES RELIGIOSAS,Bajo,NULL,NULL
+SAL,450,SERVICIOS SOCIALES (SIN ANIMO DE LUCRO),Bajo,NULL,NULL
+SAL,460,AGENCIAS INFORMACION COMERCIAL (INV MDOS),Bajo,NULL,NULL
+SAL,470,PROGRAMACION DE ORDENADORES Y  DESARROLLO SOFTWARE,Bajo,NULL,NULL
+SAL,480,SERVICIOS DE SEGURIDAD EN GRAL,Bajo,NULL,NULL
+SAL,490,AGENCIAS DE EMPREO PROVISIONAL (OUTSORCING),Bajo,NULL,NULL
+SAL,500,"SERVICIOS DE TALLER, REPARACIÓN Y MANTENIMIENTO",Bajo,NULL,NULL
+SAL,510,AGENCIAS DE VIAJES,Bajo,NULL,NULL
+SAL,520,SERVICIOS FUNEBRES,Bajo,NULL,NULL
