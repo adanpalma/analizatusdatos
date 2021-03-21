@@ -314,3 +314,114 @@ Summarize(diffodi ~ Grupo,
 ###
 
 leveneTest(df$diffodi ~ df$Grupo,Data = df)
+
+
+
+
+
+####
+# Seccion de Comparancio de Medidas
+###
+
+###
+# Comprar una medida con un valor critico (caso de mejoria > 20)
+###
+setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/2. Compara Medidas por Grupos/[AD]2.1_HT_Comprarmedida2grupos1medida1valor")
+
+#abro archivo
+df <- read_excel("espalda.xlsx")
+
+df$diff_odi <-  df$`ODI Mes0` - df$`ODI Mes1` #calculo diff odi
+
+df$ftratamiento <-  factor(df$Grupo,labels = c("Converncional","Innovador")) # Factor del grupo de tratamiento
+
+# Grafico boxplot, histogramas para ver distribucion de los datos
+
+#DESCRIPCION DE VARIABLE ODIMES 0
+hist(df$`ODI Mes0`,breaks = 20,freq = FALSE, main = "Distribución Frecuencia ODIMES 0",xlab = "Odimes 0",ylab = "Cantidad")
+boxplot(df$`ODI Mes0` ,main="Variable ODI MES 0") 
+library(car)
+# qqplot paquete car
+qqPlot(df$`ODI Mes0`,main="Variable ODI MES 0")
+
+#DESCRIPCION DE VARIABLE ODIMES 1
+hist(df$`ODI Mes1`,breaks = 20,freq = FALSE, main = "Distribución Frecuencia ODIMES 1",xlab = "Odimes 0",ylab = "Cantidad")
+boxplot(df$`ODI Mes1`, main="Variable ODI MES 1") 
+library(car)
+# qqplot paquete car
+qqPlot(df$`ODI Mes1`,main="Variable ODI MES 1")
+
+
+# Histograma de frecuencias, box plot y qqplot con plotly ODI MES 0
+
+
+dfvectodi0 <- pull(df,`ODI Mes0`) #convierto a vector ya q tibble da error en plot_ly
+name1 = names(df)[9]
+p1<-plot_ly(x = dfvectodi0 , type = "histogram",name = name1,marker=list(color='#FF6666'))%>%
+  layout(title = paste("Histograma de Frecuencias de",name1),yaxis = list(title = name1),bargap=0.005*(max(df[,name1])-min(df[,name1])))
+
+# Boxplot
+p2<-plot_ly(y = dfvectodi0 , type = "box",name = name1,boxpoints = "all")%>%
+  layout(title = paste("Boxplot de",name1),yaxis = list(title = name1))
+
+# QQplot
+
+p3<-ggqqplot(df , x = name1,color = "#FF6666",add.params = list(color = "black"))+
+  xlab("Distribuci?n Te?rica Normal") + ylab("Cuartiles reales") +
+  theme_minimal() +
+  ggtitle(paste("QQ-plot de ", name1,sep = "")) +
+  theme(plot.title = element_text(hjust = 0.5))
+p3 <- ggplotly(p3)
+p <- subplot(p1, p2, p3)%>%
+  layout(title = paste("Histograma de Frecuencias Boxplot y QQplot para la variable  ", name1,sep = ""))
+p
+
+
+
+# Histograma de frecuencias, box plot y qqplot con plotly ODI MES 1
+name1 = names(df)[10]
+dfvectodi1 <- pull(df,`ODI Mes1`) #Transformo a vector por que el tibble da problemas en el plotly
+p1<-plot_ly(x =dfvectodi1, type = "histogram",name = name1,marker=list(color='#FF6666'))%>%
+  layout(title = paste("Histograma de Frecuencias de",name1),yaxis = list(title = name1),bargap=0.005*(max(df[,name1])-min(df[,name1])))
+
+# Boxplot
+p2<-plot_ly(y = dfvectodi1 , type = "box",name = name1,boxpoints = "all")%>%
+  layout(title = paste("Boxplot de",name1),yaxis = list(title = name1))
+
+# QQplot
+
+p3<-ggqqplot(df , x = name1,color = "#FF6666",add.params = list(color = "black"))+
+  xlab("Distribuci?n Te?rica Normal") + ylab("Cuartiles reales") +
+  theme_minimal() +
+  ggtitle(paste("QQ-plot de ", name1,sep = "")) +
+  theme(plot.title = element_text(hjust = 0.5))
+p3 <- ggplotly(p3)
+p <- subplot(p1, p2, p3)%>%
+  layout(title = paste("Histograma de Frecuencias Boxplot y QQplot para la variable  ", name1,sep = ""))
+p
+
+
+####
+#  Ahora procedo a ver las distribuciones de diff odi por grupo de tratamiento Histograma,boxplot,qqplot
+###
+
+
+name1 = names(df)[11]
+name2 = "Tratamiento"
+dfvectdiff <- pull(df,diffodi) #Transformo a vector por que el tibble da problemas en el plotly
+p1 <- ggplot(df, aes(x = dfvectdiff, colour = ftratamiento)) +
+      geom_density() + geom_rug() +
+      geom_histogram(aes(y = ..density.., fill = ftratamiento), alpha = 0.2, bins = 50)
+p1
+
+
+p2 <- plot_ly(y=dfvectdiff,x=df$ftratamiento,type = 'box',name=name1,boxpoints="all", color = df$ftratamiento) %>% 
+  layout(title = paste(" Boxplot  para la variable  ", name1,"en relacion al tipo",name2,sep = ""))
+p2
+
+p3 <- crea_errdiagram(df,"diffodi","ftratamiento","Diagrama de Error Mejoria por Tratamiento", "Tratmiento","Mejoria")
+p3
+
+
+
+
