@@ -333,7 +333,7 @@ df <- read_excel("espalda.xlsx")
 
 df$diff_odi <-  df$`ODI Mes0` - df$`ODI Mes1` #calculo diff odi
 
-df$ftratamiento <-  factor(df$Grupo,labels = c("Converncional","Innovador")) # Factor del grupo de tratamiento
+df$ftratamiento <-  factor(df$Grupo,labels = c("Convencional","Innovador")) # Factor del grupo de tratamiento
 
 # Grafico boxplot, histogramas para ver distribucion de los datos
 
@@ -421,6 +421,140 @@ p2
 
 p3 <- crea_errdiagram(df,"diffodi","ftratamiento","Diagrama de Error Mejoria por Tratamiento", "Tratmiento","Mejoria")
 p3
+
+
+
+###
+# Procedo a validar la validar NORMALIDAD E IGUALDAD DE VARIANZAS DEL ODIMES 0 Y ODI MES 1 PARA TODOS LOS TRATAMIENTOS
+###
+
+shapiro.test(df$`ODI Mes0`)
+shapiro.test(df$`ODI Mes1`)
+
+
+#Valido Normalidad de OdiMes 0 y odiMes 1 para grupo de tratamiento convencional
+
+shapiro.test(df$`ODI Mes0`[df$Grupo == 0])
+shapiro.test(df$`ODI Mes1`[df$Grupo == 0])
+
+
+
+#Valido Normalidad de OdiMes 0 y odiMes 1 para grupo de tratamiento Innovador
+
+shapiro.test(df$`ODI Mes0`[df$Grupo == 1])
+shapiro.test(df$`ODI Mes1`[df$Grupo == 1])
+
+
+# Valido diffodd por grupo de tratameiento
+shapiro.test(df$diff_odi[df$Grupo == 0])
+shapiro.test(df$diff_odi[df$Grupo == 1])
+
+#Valido la igualdad de Varianzas
+leveneTest(df$diff_odi ~ df$ftratamiento,Data=df)
+
+
+#Se comprueba si el diff odi es igual por grupo de tratamiento o difieren 
+# PARA GRUPOS INDEPENDIENTES, NORMALIDAD Y   VARIANZAS IGUALES
+t.test(diff_odi ~ ftratamiento,data=df,var.equal = TRUE) #var.equal = TRUE varianzas iguales
+
+
+#Si HUBIESEN SIDO NORMALES PERO NO HAY IGUALDAD DE VARIANZAS SIENGO GRUPOS INDEPENDIENTES
+#ENTONCES SE CORRIGUE CON WELCH USANDO VAR.EQUAL = FALSE
+t.test(diff_odi ~ ftratamiento,data=df,var.equal = FALSE) #var.equal = FLASE varianzas DISTINTAS
+
+
+#Si NO SON NORMALES ENTONCES USO TEST NO PARAMETRICO 
+#PARA GRUPOS INDEPENDIENTES PERO NO NORMALES 
+wilcox.test(diff_odi ~ ftratamiento,data=df)
+
+
+
+
+###
+# Seccion de Comparar 1 medida con un Valor
+# En este caso comparar diff odi mayor a un valor critico = 20
+##
+
+valorcritico <- 20 
+
+# Se inicia con la vista de las distribuciones de frecuencias y boxplots de la diffodi para todos y por
+#tipo de tratamiento
+
+vdiffoddi <- df[,12]
+names(vdiffoddi) <- "Mejoria"
+
+vmejoria <- cbind(vdiffoddi,df$ftratamiento)
+names(vmejoria)[2] <- "Tratamiento"
+
+
+###Graficamos BoxPlot e Histgrama para 
+
+name1 <- names(vmejoria)[1]
+x1 <- vmejoria[,name1]
+n <- length(vmejoria)
+
+ggplot(vmejoria,aes(x=vmejoria[,1])) +
+  geom_histogram(colour="black",fill="#FF6666") +
+  geom_vline(aes(xintercept = mean(valorcritico, na.rm=T, colour="Mean")),
+             color="red",linetype="dashed",size=1) +
+  xlab("Rango de Clases") + 
+  ylab("Frecuencia Absoluta") +
+  theme_minimal()+
+  ggtitle(paste("Histograma de Frencuencias \n Todos Tratamientos",name1,sep=" "))+
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_manual("Legend title", values=c("black","red"))
+
+
+
+
+###Graficamos BoxPlot e Histgrama  Trataamiento Grupo0 y Grupo 1
+
+name1 <- names(vmejoria)[1]
+df1 <- vmejoria[vmejoria[,2]=="Convencional",]
+n <- length(df1)
+n
+
+ggplot(df1,aes(x=df1[,1])) +
+  geom_histogram(colour="black",fill="#FF6666") +
+  geom_vline(aes(xintercept = mean(valorcritico, na.rm=T, colour="Mean")),
+             color="red",linetype="dashed",size=1) +
+  xlab("Rango de Clases") + 
+  ylab("Frecuencia Absoluta") +
+  theme_minimal()+
+  ggtitle(paste("Histograma de Frencuencias \n Tratamiento Convencional",name1,sep=" "))+
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_manual("Legend title", values=c("black","red"))
+  
+
+
+###Graficamos BoxPlot e Histgrama  Trataamiento Grupo0 y Grupo 1
+
+name1 <- names(vmejoria)[1]
+df1 <- vmejoria[vmejoria[,2]=="Innovador",]
+n <- length(df1)
+
+
+ggplot(df1,aes(x=df1[,1])) +
+  geom_histogram(colour="black",fill="#FF6666") +
+  geom_vline(aes(xintercept = mean(valorcritico, na.rm=T, colour="Mean")),
+             color="red",linetype="dashed",size=1) +
+  xlab("Rango de Clases") + 
+  ylab("Frecuencia Absoluta") +
+  theme_minimal()+
+  ggtitle(paste("Histograma de Frencuencias \n Tratamiento  Innovador",name1,sep=" "))+
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_manual("Legend title", values=c("black","red"))
+
+
+
+creaboxplot(df,"ftratamiento","diff_odi","Box Plot DiffOdi por Grupo","Tratamientos","Mejoria")
+
+
+
+
+
+
+
 
 
 
