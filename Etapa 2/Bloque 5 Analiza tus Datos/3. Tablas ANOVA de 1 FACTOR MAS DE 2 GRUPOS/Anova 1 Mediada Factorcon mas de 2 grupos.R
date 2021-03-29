@@ -2,7 +2,7 @@
 # 1.1 INSTALAR PAQUETES DE FUNCIONES
 #********************************************************************
 # Lista de paquetes de funciones a instalar
-.packages = c("FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
+.packages = c("lme4","lmerTest", "FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
 
 .packages %in% installed.packages()
 ##
@@ -242,5 +242,92 @@ leveneTest(diffodi ~ NHD, data=df)
 # TEST NO PARAMETRICO
 ##
 kruskal.test(diffodi ~ NHD,data=df)
+
+
+
+#####
+# Ahora se trabajara con pacientes del grupo de tratamiento = 0  (tratamiento convencional)
+# para analizar si han habido diferencias entre la discapacidad antes del tratamiento  
+# y despues del tratamiento mes 0 y mes 1
+#
+#### 
+
+#Cargo los Datos
+setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/3. Tablas ANOVA de 1 FACTOR MAS DE 2 GRUPOS")
+df <- read_excel("espalda.xlsx")
+str(df)
+
+# Creo dataframe con el valor mes0 y mes 1 como parte de una columa
+# el No de mes es otra columa
+#agreo el id del paciente
+
+
+
+df_gruposrepetidos <-  data.frame(
+                       Discapacidad = c(df$`ODI Mes0`[df$Grupo == 0], df$`ODI Mes1`[df$Grupo == 0]),
+                       MesMedicion  = c(rep(0,length(df$`ODI Mes0`[df$Grupo == 0])), rep(1,length(df$`ODI Mes1`[df$Grupo == 0]))),
+                       IdPaciente   = c(seq(1,length(df$`ODI Mes0`[df$Grupo == 0])), seq(1,length(df$`ODI Mes0`[df$Grupo == 0])))  
+)
+
+
+
+df_gruposrepetidos$MesMedicion <- factor(df_gruposrepetidos$MesMedicion, label=c("Mes 0","Mes 1"))
+
+# 1 DESCRIPCI?N 
+
+#Valido que me
+# boxplot, histograma densidad, diagramas de error
+ggplot(df_gruposrepetidos) +
+  geom_density(mapping = aes(x=Discapacidad,fill=MesMedicion),alpha=0.2) +
+  ggtitle("Histograma de Densidad para Grupo Repetido Tratamiento Convencional")
+  
+
+creaboxplot(df_gruposrepetidos,"MesMedicion","Discapacidad","Box Plot Discapcidad Grupo 0 Mes 0 y Mes 1","MesMedicion","Discapaciad")
+crea_errdiagram(df_gruposrepetidos,"Discapacidad","MesMedicion","Diagrama de Medias dDiscapcidad Grupo 0 Mes 0 y Mes 1","MesMedicion","Discapacidad")
+
+
+####
+#  TEST PARAMETRICO DE ANOVA DE MEDIDAS REPETIDAS LMER (SE USA ESTE SI SON NORMALES POR LO QUE HAY QUE COMPROBARLO)
+###
+
+#lmer(PARA MODELOS LINEALES MIXTOS)
+#glmer(para modelos lineales generalizados mixtos)
+#nlmer(para modelos no lineales)
+
+##Se usa lmer porque es lineal mixto
+anova_medidarep <-  lmer(Discapacidad ~ MesMedicion + (1|IdPaciente), data=df_gruposrepetidos)
+#Calculamos la anova del modelo lineal mixto se usa anova
+anova(anova_medidarep)
+
+#Se obtienen los residuos y luego se pasan por shapiro wilks y levenetest
+residuos <- residuals(object = anova_medidarep)
+shapiro.test(residuos) #Validando Normalidad
+
+#
+### Grafico los residuales para ver como se ve la distribucion 
+#
+dfre <- data.frame(residuos)
+name1 <- names(dfre)
+
+##QQPLOT
+p3<-ggqqplot(dfre , x =name1,color = "#FF6666",add.params = list(color = "black"))+
+  xlab("Distribuci?n Te?rica Normal") + ylab("Cuartiles reales") +
+  theme_minimal() +
+  ggtitle(paste("QQ-plot de ", name1,sep = "")) +
+  theme(plot.title = element_text(hjust = 0.5))
+p3 <- ggplotly(p3)
+p3 
+hist(dfre$residuos) ##histograma
+ggplot(dfre) +geom_boxplot(mapping = aes(dfre$residuos)) # boxplot
+plot(y=(seq(-6,195)),x=dfre$residuos,main="plot(residuos) VISUALMENTE NO \n PARECEN NORMALES usando PLOT")
+
+
+
+
+#EN CASO DE QUE NO SALGA NORMAIDAD USO FRIEDMAN.TEST
+friedman.test(df_gruposrepetidos[,1],group=df_gruposrepetidos[,2],blocks=df_gruposrepetidos[,3])
+
+
+
 
 
