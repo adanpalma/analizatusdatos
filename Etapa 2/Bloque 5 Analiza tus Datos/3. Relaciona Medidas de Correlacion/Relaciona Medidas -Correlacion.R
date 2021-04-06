@@ -2,7 +2,7 @@
 # 1.1 INSTALAR PAQUETES DE FUNCIONES
 #********************************************************************
 # Lista de paquetes de funciones a instalar
-.packages = c("lme4","lmerTest", "FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
+.packages = c("Hmisc","lme4","lmerTest", "FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
 .packages %in% installed.packages()
 .inst <- .packages %in% installed.packages()
 if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
@@ -169,6 +169,22 @@ creagrafcorr <-  function(Datos,colx,coly,title,etiquetax,etiquetay,grupo=NA)  {
     stat_regline_equation(label.x.npc = "left",label.y.npc = "top",output.type = "expression", inherit.aes = TRUE)
 }
 
+# ++++++++++++++++++++++++++++
+# flattenCorrMatrix
+# ++++++++++++++++++++++++++++
+# cormat : matrix of the correlation coefficients
+# pmat : matrix of the correlation p-values
+flattenCorrMatrix <- function(cormat, pmat) {
+  ut <- upper.tri(cormat)
+  data.frame(
+    row = rownames(cormat)[row(cormat)[ut]],
+    column = rownames(cormat)[col(cormat)[ut]],
+    cor  =(cormat)[ut],
+    p = pmat[ut]
+  )
+}
+
+
 ###
 # Seteo el Directorio....
 ##
@@ -219,9 +235,45 @@ shapiro.test(df$Altura)
 
 
 
+#####
+##  en esta seccion procedo a buscar si hay asociacion
+##  Entre diff_odi y NHD.
+##  Al ser una comparacion entre una medida y un variable ordina
+##  debo usar el coeficiente de spearman (no parametrico)
+####
+
+setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/3. Relaciona Medidas de Correlacion")
+df <- read_excel("espalda.xlsx")
+df$diff_oddi <-  df$`ODI Mes0` - df$`ODI Mes1` #calculo diff odi
+df$logdiff_oddi <- log(df$diff_oddi) ## Uso Logaritmo para acercar las escalas
+
+df$NHD <-  factor(df$NHD) ##convierto a factor la variabla NHD Variable ordinal
+
+##Diagrama de Error diff odi sin logaratimo
+dfdiffodi <-  df[c(8,12)]
+ggline(data=dfdiffodi,x=names(dfdiffodi)[1],y=names(dfdiffodi)[2],
+       add = c("mean_ci","jitter"),
+       palette = "jco") +
+       ggtitle("Diagrama Error DiffOddi vs NHD")
 
 
+##Diagrama de Error diff odi con logaratimo
+dfdiffodi <-  df[c(8,13)]
+ggline(data=dfdiffodi,x=names(dfdiffodi)[1],y=names(dfdiffodi)[2],
+       add = c("mean_ci","jitter"),
+       palette = "jco") +
+  ggtitle("Diagrama Error LOG DiffOddi vs NHD")
+
+###Valido la Normalidad de diff_oddi
+shapiro.test(df$diff_oddi)
 
 
+###Procedo a calcular el coefeciente de correlacion de spearman
+###diffoddi vs NHD (ORDINAL)
+dfdiffodi <-  df[c(8,13)]
+mtcorSpearman <- rcorr(as.matrix(dfdiffodi),type = "spearman") ##Spearman
+
+#Matriz de Correlacion y Pvalor  en forma de tabla "Spearman"
+flattenCorrMatrix(mtcorSpearman$r,mtcorSpearman$P)
 
 
