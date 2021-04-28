@@ -2,7 +2,7 @@
 # 1.1 INSTALAR PAQUETES DE FUNCIONES
 #********************************************************************
 # Lista de paquetes de funciones a instalar
-.packages = c("Hmisc","lme4","lmerTest", "FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
+.packages = c("gplots","corrplot" ,"foreign","Hmisc","lme4","lmerTest", "FSA","car","plotly","ggplot2", "plotly", "xlsx","scales","stringr","readr","dplyr","psych","readxl","ggpubr","PerformanceAnalytics")
 .packages %in% installed.packages()
 .inst <- .packages %in% installed.packages()
 if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
@@ -188,92 +188,220 @@ flattenCorrMatrix <- function(cormat, pmat) {
 ###
 # Seteo el Directorio....
 ##
-setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/4. Anova DOS o mas Factores una medida")
-
+setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/4. Comparar Proporciones")
 ####
-# Cargo la data
+# Cargo la data en formato SPSS y la conveirto a Data Frame\
+# SPSS
 ####
-setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/3. Relaciona Medidas de Correlacion")
-df <- read_excel("espalda.xlsx")
+library(foreign)
+df <- read.spss(file.choose(),to.data.frame = TRUE)
 
-df <- df[,c(4,5,9)] #Selecciono  Peso, Altura y OdiMes 0
+## Crear la tabla de contingencias para lf_mes0 vs grupo
 
+tab_cont_lfc1 <- table(df[,c(14,11)])
+dftabcontlfc1 <- data.frame(tab_cont_lfc1)
+colnames(dftabcontlfc1) <- c("Nivel","Grupo","Frec")
+View(dftabcontlfc1)
 
-
-###
-# Se grafica el matrix plot para describir graficamente la forma de la distribucion, coeficiente de correlacion
-###
-
-# Graficamos Matrix Plot para ver Coeficiente de Correlacion  PEARSON
-pairs.panels(df,method = "pearson",main="Coeficiente Pearson")
-
-# Graficamos Matrix Plot para ver Coeficiente de Correlacion  Spearman
-pairs.panels(df,method = "spearman",main="Coeficiente Spearman")
-
-
-###
-# Se muestran las matrices de correlacion y p-valor
-##
-mtcorPearson <- rcorr(as.matrix(df),type = "pearson") ##Pearson
+## Se pasa a Excel para calcular los valores esperados que sale de 
+# VESPERADO F1.C1 = suma (toda la fila 1) * suma(toda la columna1) / suma(toda la tabla)
+# VESPERADO F2.C2 = suma (toda la fila 1) * suma(toda la columna2) / suma(toda la tabla)
+# ....
+# VESPERADO FN,CN = SUMA(TODA LA FILA N) * SUMA (TODA LA COLUMNA N) / SUMA (TODA LA TABLA)
 
 
-mtcorSpearman <- rcorr(as.matrix(df),type = "spearman") ##Spearman
+# HISTOGRAMA PARA MOSTRAR EL RECUENTO DE VALORES POR TIPO DE TRATAMIENTO
 
-#Matrix de Correlacion y Pvalor en forma de tabla "PEARSON"
-flattenCorrMatrix(mtcorPearson$r, mtcorPearson$P)
+name1 = names(df)[14]
+name2 = names(df)[11]
 
-#Matriz de Correlacion y Pvalor  en forma de tabla "Spearman"
-flattenCorrMatrix(mtcorSpearman$r,mtcorSpearman$P)
+p <- ggplot(df,mapping=aes(df[,name1],..count..)) +
+    geom_bar(aes(fill=df[,name2]),position = position_stack()) +
+    xlab(name1) + ylab("Frecuencia Absoluta")+
+    ggtitle(paste("Diagrama de Barras ",name1))+
+    guides(fill=guide_legend(title=""))
 
 
-##Valido la Normalidad  PESO de las Variables par decidir si me quedo con Pearson o Spearman
-shapiro.test(df$Peso)
+###continuar con el calculo del chiq.test para determinar via el test de 
+### chi cuadrado si hay o no diferencias significativa en las proporciones
+chisq <- chisq.test(x=as.vector(df[,14]),y=as.vector(df[,11]),correct = FALSE)
+chisq
 
 
-##Valido la Normalidad  ALTURA de las Variables par decidir si me quedo con Pearson o Spearman
-shapiro.test(df$Altura)
+
+#Cuando los datos el chi cuadrado  da un p valor pero con un warining
+#es porque posiblemente los valores esperados son muy chicos y como
+# chi cuadrado espera datos normales, y no lo son genera ese waring
+#en tales caso puedes confirmar con fisher.test
+fisher.test(x=as.vector(df[,14]),y=as.vector(df[,11]))
+
+
+
+
+# PROCEDO A VER EL P-VALOR POR CADA UNA DE LAS FILAS DE LA VARIABLE LF_MES1
+prop.test(x=c(0,24),n=c(101,99)) # MINIMA
+prop.test(x=c(23,64),n=c(101,99)) # MODERADA
+prop.test(x=c(51,11),n=c(101,99)) # INTENSA
+prop.test(x=c(25,0),n=c(101,99)) # DISCAPACIDAD
+prop.test(x=c(2,0),n=c(101,99)) # MAXIMA
+
+
 
 
 
 #####
-##  en esta seccion procedo a buscar si hay asociacion
-##  Entre diff_odi y NHD.
-##  Al ser una comparacion entre una medida y un variable ordina
-##  debo usar el coeficiente de spearman (no parametrico)
+# Comparacion de una proporcion con una PROBABILIDAD CONOCIDA,valor critico (BONDAD DE AJUSTE)
+# PARA EL CASO QUEREMOS VER SI POR EJEMPLO CASO DE RATONES CON CANCER ESPONTANEOS
+# VER SI MACHOS Y HEMBRAS TIENEN UN 50% DE PROBABILIDAD (BONDAD DE AJUSTE
+
+dfratones = data.frame()
+
+#####
+dfmouses <- data.frame(sexoraton = c("MACHOS","HEMBRAS"), CANCERESPONTANEO = c(95,65))
+####
+# COMPARO  LOS MACHOS CON CANCER ESPONTANEO VS BONDAD DE AJUSTE DEL 50%
+# prop.test(valormachos, totalmuestra, p=bondadajuste,correct=FALSE) Si p-valor < 0.05 SON DIFERENTES AL 50%
+# prop.test(valormachos, totalmuestra, alternative="greater", correct=FALSE) Si p-valor < 0.05 Indica que en efecto la probabilidad de machos con cancer son > 50%
 ####
 
-setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/3. Relaciona Medidas de Correlacion")
-df <- read_excel("espalda.xlsx")
-df$diff_oddi <-  df$`ODI Mes0` - df$`ODI Mes1` #calculo diff odi
-df$logdiff_oddi <- log(df$diff_oddi) ## Uso Logaritmo para acercar las escalas
-
-df$NHD <-  factor(df$NHD) ##convierto a factor la variabla NHD Variable ordinal
-
-##Diagrama de Error diff odi sin logaratimo
-dfdiffodi <-  df[c(8,12)]
-ggline(data=dfdiffodi,x=names(dfdiffodi)[1],y=names(dfdiffodi)[2],
-       add = c("mean_ci","jitter"),
-       palette = "jco") +
-       ggtitle("Diagrama Error DiffOddi vs NHD")
+##Busco ver si las probabilidades de Machos  son iguales o distintas
+prop.test(x=c(95),n=c(160),p=0.5,correct = FALSE)
+##Busco ver si las probabilidades de Machos de cancer espontaneo son > 5%
+prop.test(x=95,n=160,p=0.5,correct = FALSE,alternative="greater")
+prop.test(x=95,n=160,p=0.5,correct = FALSE,alternative="less")
 
 
-##Diagrama de Error diff odi con logaratimo
-dfdiffodi <-  df[c(8,13)]
-ggline(data=dfdiffodi,x=names(dfdiffodi)[1],y=names(dfdiffodi)[2],
-       add = c("mean_ci","jitter"),
-       palette = "jco") +
-  ggtitle("Diagrama Error LOG DiffOddi vs NHD")
 
-###Valido la Normalidad de diff_oddi
-shapiro.test(df$diff_oddi)
+###
+#  Comparacion de dos proporciones para ver que tanta probabilidad tiene cada una 
+#  Comparo a Machos y Hembas, con cancer espontaneo y veo las probabilidades
+#  prop.test(x=c(machos,hembas),n=c(totaldatos,totaldatos),correct=FALSE)  SI SALEN < 0.05 LAS PROPORCIONES SON DIFERENTES Y PROBABILIDADES SON DIFERENTES
+###
+
+#Busco ver si las probabilidades de Machos  son iguales o distintas
+prop.test(x=c(95,65),n=c(160,160),correct = FALSE)  # Si sale < 0.05  entonces las probabilidades de ambos grupos son distintas
+##Busco ver si las probabilidades de Machos SEA mayor que las Hembras
+prop.test(x=c(95,65), n=c(160,160),correct=FALSE, alternative ="greater") # Si sale < 0.05 indica que el grupo macho tiene mas probabilidad que las hembras
+##Busco ver si las probabilidades de Machos SEA MENOR que las Hembras
+prop.test(x=c(95,65), n=c(160,160),correct=FALSE, alternative ="less") # Si sale > 0.05 indica que no es menor sino mayor
 
 
-###Procedo a calcular el coefeciente de correlacion de spearman
-###diffoddi vs NHD (ORDINAL)
-dfdiffodi <-  df[c(8,13)]
-mtcorSpearman <- rcorr(as.matrix(dfdiffodi),type = "spearman") ##Spearman
 
-#Matriz de Correlacion y Pvalor  en forma de tabla "Spearman"
-flattenCorrMatrix(mtcorSpearman$r,mtcorSpearman$P)
+
+###
+# Parte 5, Asociacion de Proporciones para grpupos de control y lfmes1 y nhd
+###
+
+#Cargo la data a utilizar..
+
+setwd("~/Analiza tus Datos/Etapa 2/Bloque 5 Analiza tus Datos/5. Relacion de Proporciones")
+#Leo el archivo en sav SPSS que tiene la data para el ejercicio
+
+df <- read.spss(file.choose(),to.data.frame = TRUE) # Leo el archivo en formato spss
+
+##Selecciono las columnas para trabajar separadas por grupos de tratamientos
+dfgest <- df[df$Grupo == "Estándar",c("Grupo","NHD","LF_Mes1")]
+dfginv <- df[df$Grupo == "Investigación",c("Grupo","NHD","LF_Mes1")]
+
+#CREO LA TABLA DE CONTINGENCIAS PARA TRATAMIENTO ESTANDARD
+tcontiest =table(dfgest$LF_Mes1,dfgest$NHD)
+tcontiest
+
+# Creo Diagrama de Barras apreciar mejor la tabla de contingencias por Grupo Tratamiento
+#Grupo Estandard
+name1 <- names(dfgest)[3]
+name2 <- names(dfgest)[2]
+p2 <- ggplot(dfgest,aes(dfgest[,name1], ..count..))+
+  geom_bar(aes(fill=dfgest[,name2]),position = "dodge")+
+  ggtitle("Diagrama de Barra NHD y LFMes1 Grupo Estandar")+
+  xlab("Tipo de Discapcidad") + ylab("Frecuencia Absoluta")
+
+p2
+
+
+#CREO LA TABLA DE CONTINGENCIAS PARA TRATAMIENTO INVESTIGACION
+tcontiinv =table(dfginv$LF_Mes1,dfginv$NHD)
+tcontiinv
+
+# Creo Diagrama de Barras apreciar mejor la tabla de contingencias por Grupo Tratamiento
+#Grupo Investigacion
+name1 <- names(dfginv)[3]
+name2 <- names(dfginv)[2]
+p2 <- ggplot(dfginv,aes(dfginv[,name1], ..count..))+
+  geom_bar(aes(fill=dfginv[,name2]),position = "dodge")+
+  ggtitle("Diagrama de Barra NHD y LFMes1 Grupo Investigacion")+
+  xlab("Tipo de Discapcidad") + ylab("Frecuencia Absoluta")
+
+p2
+
+
+
+#CALCULAR EL TEST DE CHI CUADRADO PEARSON SIN CORRECION (PARA SABER SI HAY RELACION)
+#grupo tratamiento estandar SE LE PIDE SIMULAR EL P-VALOR ya que hay muy pocos valores y da warnigs
+chisqgest <- chisq.test(as.vector(dfgest[,3]), as.vector(dfgest[,2]), correct = FALSE,simulate.p.value = TRUE ) # Sin correcion
+chisqgest
+
+#CALCULAR EL TEST DE CHI CUADRADO PEARSON SIN CORRECION  (PARA SABER SI HAY RELACION)
+#grupo tratamiento INVESTIGACION SE LE PIDE SIMULAR EL P-VALOR ya que hay muy pocos valores y da warnigs
+chisqginv <- chisq.test(as.vector(dfginv[,3]), as.vector(dfginv[,2]), correct = FALSE, simulate.p.value = TRUE) # Sin correcion
+chisqginv
+
+
+###Antes proceo a converti la tabla de contingencias en MATRICES 
+###Matrix para poder usarla 
+matgest <- as.data.frame.matrix(tcontiest) #matrix grupo estandard
+matginv <- as.data.frame.matrix(tcontiinv) # Matriz grupo Investigacion
+
+
+##Muestro una grafica llamada ggBALLONPLOT que muestra las relaciones
+## de los grupos como una tabla de contingencias pero usando graficos
+
+ggballoonplot(matgest,main="Grupo Estandard LF1 vs NHD")
+ggballoonplot(matginv,main="Grupo Investigacion LF1 vs NHD")
+
+#VALROES OBSERVADOS
+chisqgest$observed# Valores OBSERVADOS del grupo Estandard
+# VALROES OBSERVADOS
+chisqginv$observed # Valores OBSERVADOS del grupo Investigacion
+
+#VALORES ESPERADOS
+round(chisqgest$expected,2)#Valores Esperados Grupo Estandard
+
+#VALORES ESPERADOS
+round(chisqginv$expected,2) #Valores Esperados Grupo Investigacion
+
+library(corrplot) # Para dibujar los resiudos y ver quienes son mas fuertes
+
+#RESIDUOS
+round(chisqgest$residuals,2) # Grupo Estandard
+corrplot(chisqgest$residuals,is.cor=FALSE,main=)
+
+#Residuos 
+round(chisqginv$residuals,0) #Grupo Investigacion
+corrplot(chisqginv$residuals, is.corr = FALSE, main="Residuos Grupo Investigacion")
+
+#CALCULO DE LA CONTIBUCION DE CADA CELDA PARA LOS GRUPOS
+#GRUPO ESTANDARD
+contri_gesta <-  100* chisqgest$residuals^2/chisqgest$statistic
+round(contri_gesta,3) 
+corrplot(contri_gesta,is.corr = FALSE)
+
+#CALCULO DE LA CONTIBUCION DE CADA CELDA PARA LOS GRUPOS
+#GRUPO INVESTIGACION
+contri_inv <-  100 * chisqginv$residuals^2/chisqginv$statistic
+round(contri_inv,3) 
+corrplot(contri_inv,is.corr = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
